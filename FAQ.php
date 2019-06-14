@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <title>Obstgarten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="RB_home_estilo_v20190608.css">
+  <link rel="stylesheet" href="css/styleUnico.css">
+
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
   <body>
 
-<?php include_once ("header.html") ?>
+<?php include_once ("RB_header.html") ?>
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -56,7 +57,7 @@
       </div>
     </div>
 
-    <?php include_once ("footer.html") ?>
+    <?php include_once ("RB_footer.html") ?>
 
   </body>
 </html>
