@@ -1,0 +1,404 @@
+* {
+  box-sizing: border-box;
+  
+}
+
+/* header */
+
+img.logo {
+  display: block;
+  border-radius: 50%;
+  border: gray 1px solid;
+  margin-top: 35px;
+  margin: 0 auto;
+  width: 145px;
+  height: 140px;
+}
+
+section.banner {
+  display: none;
+}
+
+header span.fa {
+  background-color: rgb(162, 186, 162);
+  color: white;
+  font-size: 34px;
+  padding: 10px;
+  margin-top: 12px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+header ul {
+  list-style: none;
+  padding-left: 0;
+  display: none;
+
+}
+
+header nav:hover ul {
+  display: block;
+}
+
+header ul li {
+  background-color: rgb(162, 186, 162);
+    margin-bottom: 5px;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+header ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+/* body ppal*/
+
+body {
+  background-image: url("../img/leaves.png");
+}
+
+section.vip-products article {
+  width: 100%;
+}
+
+section.vip-products .photo {
+  width: 100%;
+}
+
+.fotoquenoresponde {
+  width: 100%;
+}
+
+p {
+  margin-top: 1px;
+  margin-bottom: 1px;
+  width: 100%;
+}
+
+/* registro */
+
+.cuerpo-registro {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #6dcdb1;
+}
+
+main h2 {
+    color: red;
+    font-family: Helvetica, sans-serif;
+}
+
+main {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.items-registro {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+label {
+    margin-top: 10px;
+    font-family: Helvetica, sans-serif;
+}
+
+.fecha-nac {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dia {
+    width: 22%;
+}
+
+.mes {
+    width: 22%;
+}
+
+.año {
+    width: 50%;
+}
+
+.terminos {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botones-registro {
+    display: flex;
+    justify-items: center;
+    justify-content: space-around;
+}
+
+/*perfil de usuario*/
+
+.profile{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
+.foto-perfil {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.foto-perfil img {
+    display: block;
+    margin: 2px auto;
+    width: 70%;
+    border-radius: 50%;
+}
+
+/* log in */
+
+.titulo-login h2 {
+    text-align: center;
+    color: #6dcdb1;
+}
+
+.items-login {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.recordar-olvidar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.olvide {
+    position: relative;
+    top: 10px;
+}
+
+.botones-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#boton-login {
+    width: 80%;
+}
+
+
+
+
+/* footer */
+
+#footer {
+  background-color: rgb(162, 186, 162);
+}
+
+footer ul li {
+  list-style: none;
+}
+
+.uldelfooter {
+  margin-left: 10px;
+  padding-inline-start: 10px;
+}
+
+
+.piedepagina {
+  margin-left: 1px;
+}
+
+/* media queries */
+
+@media only screen and (min-width: 768px) {
+
+    /* ppal, header y footer */
+
+    div.container {
+    width: 80%;
+    margin: 0 auto;
+    }
+
+    .toggle-nav {
+    display: none;
+    }
+
+    header ul {
+    display: block;
+    overflow: hidden;
+    }
+
+    header ul li {
+    float: left;
+    width: 12.5%;
+    margin-right: 5%;
+    }
+
+    header ul li:last-child {
+    margin-right: 0;
+    }
+
+    section.banner {
+    display: block;
+    margin-bottom: 15px;
+    }
+
+    section.banner img {
+    width: 100%;
+    }
+
+    section.vip-products {
+    overflow: hidden;
+    }
+
+    section.vip-products article.product {
+    float: left;
+    width: 30%;
+    margin-right: 5%;
+
+    }
+
+    section.vip-products article.product:nth-child(2n) {
+    margin-right: 0;
+    }
+
+    /* registro, perfil y log in */
+
+    label {
+        margin-top: 20px;
+    }
+
+    .nombre-apellido {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .genero-pais {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .email-confirmar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .pass-confirmar {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .campo-registro {
+        width: 45%;
+    }
+
+    .año {
+        width: 45%;
+        position: relative;
+        right: 20px;
+    }
+
+    .date {
+        position: relative;
+        left: 20px;
+    }
+
+    .dia {
+        position: relative;
+        left: 20px;
+    }
+
+    .mes {
+        position: relative;
+        right: 15px;
+    }
+
+    .terminos {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .botones-registro {
+        margin-top: 20px;
+    }
+
+    .boton-registrarme {
+        width: 200px;
+    }
+
+    .boton-cancelar {
+        width: 200px;
+    }
+
+    .profile {
+    display: flex;
+    justify-content: space-around;
+    }
+
+    .foto-perfil {
+    width: 40%;
+    margin-bottom: 10px;
+    }
+
+    .ladoDatos {
+        width: 40%;
+    }
+
+    .ladoDatos h2 {
+        color: white;
+    }
+
+    .ladoDatos p {
+        color: white;
+    }
+
+    .cuerpo-perfil {
+        background-color: lightslategray;
+    }
+
+    .botones-perfil {
+        display: flex;
+        justify-content: center;
+    }
+
+    .login {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .cuerpo-registro {
+        width: 90%;
+        background-color: white;
+
+    }
+
+    main h2{
+        color: #6dcdb1;
+    }
+
+    .botones-perfil {
+        position: relative;
+        width: 50%;
+        margin: 0 auto; 
+        left: 100px;
+        bottom: 70px;
+    }
+
+    .ladoDatos h2 {
+        color: black;
+    }
+
+    .ladoDatos p {
+        color: black;
+    }
+
+    .cuerpo-perfil {
+        background-color: white;
+    }
+}
