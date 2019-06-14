@@ -42,7 +42,7 @@ header nav:hover ul {
 }
 
 header ul li {
-  background-color: rgb(162, 186, 162);
+    background-color: rgb(162, 186, 162);
     margin-bottom: 5px;
     text-align: center;
     text-transform: uppercase;
@@ -87,8 +87,10 @@ p {
 }
 
 main h2 {
-    color: red;
+    color: #6dcdb1;
     font-family: Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -353,15 +355,11 @@ footer ul li {
     }
 
     .ladoDatos h2 {
-        color: white;
+        color: ;
     }
 
     .ladoDatos p {
-        color: white;
-    }
-
-    .cuerpo-perfil {
-        background-color: lightslategray;
+        color: ;
     }
 
     .botones-perfil {
@@ -429,7 +427,7 @@ footer ul li {
     .foto-login {
       display: block;
       width: 40%;
-    } 
+    }
 
     .login img {
       width: 100%;
@@ -445,6 +443,6 @@ footer ul li {
     }
 
     .foto-login {
-      width: 40%;
+      width: 400px;
     }
 }
