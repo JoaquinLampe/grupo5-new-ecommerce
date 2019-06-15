@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  
+
 }
 
 /* header */
@@ -88,7 +88,7 @@ p {
 
 main h2 {
     color: red;
-    font-family: Helvetica, sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 main {
@@ -105,7 +105,7 @@ main {
 
 label {
     margin-top: 10px;
-    font-family: Helvetica, sans-serif;
+    font-family: "Karla", sans-serif;
 }
 
 .fecha-nac {
@@ -216,6 +216,9 @@ footer ul li {
 
 @media only screen and (min-width: 768px) {
 
+
+      /* formato de la nav*/
+
     /* ppal, header y footer */
 
     div.container {
@@ -236,6 +239,8 @@ footer ul li {
     float: left;
     width: 12.5%;
     margin-right: 5%;
+    height: 35px;
+    font-family: "Karla", sans-serif;
     }
 
     header ul li:last-child {
@@ -385,7 +390,7 @@ footer ul li {
     .botones-perfil {
         position: relative;
         width: 50%;
-        margin: 0 auto; 
+        margin: 0 auto;
         left: 100px;
         bottom: 70px;
     }
