@@ -13,23 +13,9 @@
 </head>
 
 <body class="cuerpo-perfil">
-  <header class="main-header">
-    <img src="img/Obstgarten_wix_logo_maker.PNG" alt="logo" class="logo">
-    <nav class="main-nav">
 
-      <a href="#" class="toggle-nav">
-        <span class='fa fa-bars'></span>
-      </a>
-      <ul>
-        <li> <a href="#">Home</a></li>
-        <li><a href="#">Productos frescos</a></li>
-        <li><a href="#">Productos envasados</a></li>
-        <li><a href="#">Locaciones</a></li>
-        <li><a href="#">Nuestra Historia</a></li>
-        <li><a href="#">Contactenos</a></li>
-      </ul>
-    </nav>
-  </header>
+  <?php include_once ("RB_header.html") ?>
+
   <main>
     <div class="titulo-login">
       <h2>
@@ -74,7 +60,7 @@
         </div>
       </form>
       <div class="divider">
-        
+
       </div>
       <div class="foto-login">
         <img src="img/registro.png" alt="">
@@ -82,19 +68,8 @@
 
 
   </main>
-  <footer id="footer">
-    <div class="piedepagina">
-      <ul class="uldelfooter"><br>
-        <li><strong>OBSTGARTEN</strong></li><br>
-        <li>Mercado de Concentración, Rosario, Argentina</li>
-        <li>Telefono:98765433</li>
-      </ul>
-      <ul class="uldelfooter">
-        <li>Horarios de apertura:</li>
-        <li>Sábados y domingos de 7:00 h a 15:00 h</li><br>
-      </ul>
-    </div>
-  </footer>
+
+  <?php include_once ("RB_footer.html") ?>
 
 </body>
 
