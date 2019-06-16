@@ -235,17 +235,14 @@ footer ul li {
     overflow: hidden;
     }
 
+
     header ul li {
-    float: left;
-    width: 12.5%;
-    margin-right: 5%;
-    min-height: 35px;
-    }
-
-    header ul {
-      min-height: 35px;
-      font-family: "Karla", sans-serif;
-
+       float: left;
+       width: 12.5%;
+       margin-right: 5%;
+       height: 35px;
+       vertical-align: middle;
+       font-family: "Karla", sans-serif;
     }
 
     header ul li:last-child {
