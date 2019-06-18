@@ -10,6 +10,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
 
     <title>Registro</title>
 </head>
@@ -112,6 +113,12 @@
                                     class="form-control" placeholder="Confirma tu Contraseña" required>
                             </div>
                         </div>
+                    </li>
+                    <li>
+                      <div class="form-group boton-foto-perfil">
+                        <label for="exampleFormControlFile1">Subí tu foto de perfil</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                      </div>
                     </li>
                 </ul>
                 <div class="custom-control custom-checkbox terminos">
