@@ -42,7 +42,7 @@ header nav:hover ul {
 }
 
 header ul li {
-  background-color: rgb(162, 186, 162);
+    background-color: rgb(162, 186, 162);
     margin-bottom: 5px;
     text-align: center;
     text-transform: uppercase;
@@ -83,12 +83,14 @@ p {
 .cuerpo-registro {
     width: 100%;
     margin: 0 auto;
-    background-color: #6dcdb1;
+    background-image: url("../img/leaves.png");
 }
 
 main h2 {
     color: red;
     font-family: "Karla", sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -187,6 +189,10 @@ label {
 
 #boton-login {
     width: 80%;
+}
+
+.foto-login {
+  display: none;
 }
 
 
@@ -324,6 +330,11 @@ footer ul li {
         right: 15px;
     }
 
+    .boton-foto-perfil {
+      position: relative;
+      left: 20px;
+    }
+
     .terminos {
         display: flex;
         justify-content: flex-start;
@@ -356,15 +367,11 @@ footer ul li {
     }
 
     .ladoDatos h2 {
-        color: white;
+        color: ;
     }
 
     .ladoDatos p {
-        color: white;
-    }
-
-    .cuerpo-perfil {
-        background-color: lightslategray;
+        color: ;
     }
 
     .botones-perfil {
@@ -376,13 +383,30 @@ footer ul li {
         width: 60%;
         margin: 0 auto;
     }
+
+    .olvide {
+      position: relative;
+      top: 19px;
+    }
 }
 
 @media only screen and (min-width: 1024px){
     .cuerpo-registro {
         width: 90%;
-        background-color: white;
+        background-image: url("../img/leaves.png");
 
+    }
+
+    .dia {
+      left: 30px;
+    }
+
+    .mes {
+      right: 24px;
+    }
+
+    .año {
+      right: 30px;
     }
 
     main h2{
@@ -406,6 +430,43 @@ footer ul li {
     }
 
     .cuerpo-perfil {
-        background-color: white;
+        background-image: url("../img/leaves.png");
+    }
+
+    .titulo-login {
+      display: flex;
+      justify-content: center;
+    }
+
+    .login {
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .form-login {
+      width: 400px;
+    }
+
+    .foto-login {
+      display: block;
+      width: 40%;
+    }
+
+    .login img {
+      width: 100%;
+      position: relative;
+      top: 20px;
+    }
+
+    .divider {
+      width: 1px;
+      opacity: 0.8;
+      background-color: #858f96;
+      margin: 0 71px;
+    }
+
+    .foto-login {
+      width: 400px;
     }
 }
