@@ -10,14 +10,11 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
         integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styleUnico.css">
-    <link href="https://fonts.googleapis.com/css?family=Karla&display=swap" rel="stylesheet">
     <title>Perfil</title>
 </head>
 
 <body class="cuerpo-perfil">
-
     <?php include_once ("RB_header.html") ?>
-
     <main>
         <div class="profile">
             <div class="foto-perfil">
@@ -48,7 +45,6 @@
         </div>
 
     </main>
-
     <?php include_once ("RB_footer.html") ?>
 
 </body>
