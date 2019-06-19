@@ -41,7 +41,7 @@ header nav:hover ul {
   display: block;
 }
 
-header ul li {
+.main-nav ul li {
     background-color: rgb(162, 186, 162);
     margin-bottom: 5px;
     text-align: center;
@@ -49,9 +49,19 @@ header ul li {
 
 }
 
-header ul li a {
+.main-nav ul li a {
   color: black;
   text-decoration: none;
+}
+
+.login-registro ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.login-registro ul li a {
+  text-decoration: none;
+  color: rgb(162, 186, 162);
 }
 
 /* body ppal*/
@@ -237,12 +247,12 @@ footer ul li {
     }
 
     header ul {
-    display: block;
-    overflow: hidden;
+      display: block;
+      overflow: hidden;
     }
 
 
-    header ul li {
+    .main-nav ul li {
        float: left;
        width: 12.5%;
        margin-right: 5%;
@@ -251,32 +261,38 @@ footer ul li {
        font-family: "Karla", sans-serif;
     }
 
-    header ul li:last-child {
-    margin-right: 0;
+    .main-nav ul li:last-child {
+      margin-right: 0;
+    }
+
+    .login-registro{
+      width: 30%;
+      position: relative;
+      left: 500px;
     }
 
     section.banner {
-    display: block;
-    margin-bottom: 15px;
+      display: block;
+      margin-bottom: 15px;
     }
 
     section.banner img {
-    width: 100%;
+      width: 100%;
     }
 
     section.vip-products {
-    overflow: hidden;
+      overflow: hidden;
     }
 
     section.vip-products article.product {
-    float: left;
-    width: 30%;
-    margin-right: 5%;
+      float: left;
+      width: 30%;
+      margin-right: 5%;
 
     }
 
     section.vip-products article.product:nth-child(2n) {
-    margin-right: 0;
+      margin-right: 0;
     }
 
     /* registro, perfil y log in */
@@ -391,10 +407,16 @@ footer ul li {
 }
 
 @media only screen and (min-width: 1024px){
-    .cuerpo-registro {
-        width: 90%;
-        background-image: url("../img/leaves.png");
 
+    .login-registro{
+      width: 30%;
+      position: relative;
+      left: 900px;
+    }
+
+    .cuerpo-registro {
+      width: 90%;
+      background-image: url("../img/leaves.png");
     }
 
     .dia {
