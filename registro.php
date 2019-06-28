@@ -1,3 +1,28 @@
+<?php
+
+require_once("funciones.php");
+
+if($_POST){
+   $errores = validadRegistracion($_POST);
+
+   if (empty($errores)) {
+       
+    $usuario = armarUsuario($_POST);
+    
+    registrar($usuario);
+
+    header("location:login.php");exit;
+   }
+}
+
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -26,20 +51,20 @@
                     Registro
                 </h2>
             </div>
-            <form action="" method="POST">
+            <form action="registro.php" method="POST">
                 <ul class="items-registro">
                     <li class="nombre-apellido">
                         <div class="campo-registro">
                             <label for="nombre">Nombre</label>
                             <div>
-                                <input type="text" name="text" id="nombre" class="form-control"
+                                <input type="text" name="nombre" id="nombre" class="form-control"
                                     placeholder="Ingresá tu nombre" required>
                             </div>
                         </div>
                         <div class="campo-registro">
                             <label for="apellido">Apellido</label>
                             <div>
-                                <input type="text" name="text" id="apellido" class="form-control"
+                                <input type="text" name="apellido" id="apellido" class="form-control"
                                     placeholder="Ingresá tu apellido" required>
                             </div>
                         </div>
@@ -58,7 +83,7 @@
                         <div class="campo-registro">
                             <label for="pais">País</label>
                             <div>
-                                <input type="text" name="text" id="pais" class="form-control"
+                                <input type="text" name="pais" id="pais" class="form-control"
                                     placeholder="De donde sos?" required>
                             </div>
                         </div>
