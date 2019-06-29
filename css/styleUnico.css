@@ -205,6 +205,94 @@ label {
   display: none;
 }
 
+/*productos envasados*/
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Karla", sans-serif;
+}
+
+.producto {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px rgb(162, 186, 162);
+}
+
+.display {
+  position: relative;
+}
+
+.best {
+  width: 90px;
+  position: absolute;
+  top: -6px;
+}
+
+
+.organic {
+  width: 90px;
+  position: absolute;
+  left: 225px;
+  top: 90px;
+}
+
+.fondo-organic{
+  position: absolute;
+  left: 227px;
+  top: 115px;
+  border-radius: 11%;
+  width: 86px;
+  height: 40px;
+  background-color: none;  
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+  0%  {background-color: none;}
+  50%  {background-color: yellow;}
+  100%  {background-color: none;}
+}
+
+.producto h2 {
+  margin-bottom: 0;
+}
+
+.precio {
+  font-size: 50px;
+}
+
+.foto-producto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.botones-producto {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ver-mas {
+  width: 40%;
+}
+
+.al-carrito {
+  color: rgb(162, 186, 162);
+  width: 40%;
+}
+
 
 
 
