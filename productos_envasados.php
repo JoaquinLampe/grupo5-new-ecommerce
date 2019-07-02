@@ -31,8 +31,8 @@
             Cras ornare tristique elit.
           </p>
           <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
+            <a href="producto_unitario.php"><button class="btn btn-outline-primary ver-mas">
+              Ver Mas</a>
             </button>
             <button class="btn btn-outline-secondary al-carrito">
               <i class="fas fa-shopping-cart"></i>

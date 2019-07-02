@@ -1,3 +1,28 @@
+<?php
+include_once ("funciones.php");
+
+if(estaLogueado()){
+  header("location: RB_home_v20190614.php");exit;
+}
+
+if ($_POST) {
+  $errores = validarLogin($_POST);
+
+  if (count($errores) == 0) {
+    loguear($_POST["email"]);
+
+    header("location:RB_home_v20190614.php");exit;
+
+    // code...
+  } else {
+    foreach($errores as $error) {
+      echo $error . "<br>";
+    }
+  }}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 

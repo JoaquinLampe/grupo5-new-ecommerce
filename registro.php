@@ -5,15 +5,22 @@ require_once("funciones.php");
 if($_POST){
    $errores = validadRegistracion($_POST);
 
-   if (empty($errores)) {
-       
-    $usuario = armarUsuario($_POST);
-    
-    registrar($usuario);
 
-    header("location:login.php");exit;
+// sino hay errores
+   if (empty($errores)) { //tb if (count($errores)==0)//
+
+    $usuario = armarUsuario($_POST); // aca estamos armando el usuario//
+// todas las transformaciones que se necesitan para que quede lista,
+// se producen en armarUsuario();//
+
+
+    registrar($usuario); // aca estamos guardando nuevo usuario//
+
+    header("location:login.php");exit; // aca se redirige a la pagina de exito//
    }
 }
+
+
 
 
 
