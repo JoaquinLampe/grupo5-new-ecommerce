@@ -1,3 +1,71 @@
+<?php
+    
+
+  $envasado1 = [
+		"titulo" => "Envasado 1",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod1.jpg",
+		"id" => 53,
+		"precio" => 100
+	];
+
+	$envasado2 = [
+		"titulo" => "Envasado 2",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod2.jpg",
+		"id" => 12,
+		"precio" => 200
+	];
+
+	$envasado3 = [
+		"titulo" => "Envasado 3",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod3.jpg",
+		"id" => 2,
+		"precio" => 150
+	];
+
+	$envasado4 = [
+		"titulo" => "Envasado 4",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod4.jpg",
+		"id" => 20,
+		"precio" => 100
+	];
+
+	$envasado5 = [
+		"titulo" => "Envasado 5",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod5.jpg",
+		"id" => 120,
+		"precio" => 400
+	];
+
+	$envasado6 = [
+		"titulo" => "Envasado 6",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod6.jpg",
+		"id" => 200,
+		"precio" => 200
+	];
+    
+  $envasados = [
+		$envasado1,
+		$envasado2,
+		$envasado3,
+		$envasado4,
+		$envasado5,
+		$envasado6
+    ];
+    
+
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -13,22 +81,22 @@
     <body>
       <?php include_once ("RB_header.html") ?>
       <section class="productos">
-
-        <article class="producto">
+       <?php foreach($envasados as $envasado) :?>
+       <article class="producto">
           <div class="display">
             <div class="fondo-organic"></div>
             <img class="best" src="img/bestseller.png" alt="">
             <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod1.jpg" alt="">
+            <img class="foto-producto"src="img/<?=$envasado["foto"]?>" alt="">
           </div>
           <h2>
-            Aliquam tincidunt mauris eu risus.
+            <?=$envasado["titulo"]?>
           </h2>
           <p class="precio">
-          $9.90
+            $<?=$envasado["precio"]?>
           </p>
           <p>
-            Cras ornare tristique elit.
+            <?=$envasado["descripcion"]?>
           </p>
           <div class="botones-producto">
             <a href="producto_unitario.php"><button class="btn btn-outline-primary ver-mas">
@@ -39,127 +107,9 @@
             </button>
           </div>
         </article>
-
-        <article class="producto">
-          <div class="display">
-            <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod2.jpg" alt="">
-          </div>
-          <h2>
-            Aliquam tincidunt mauris eu risus.
-          </h2>
-          <p class="precio">
-          $9.90
-          </p>
-          <p>
-            Cras ornare tristique elit.
-          </p>
-          <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="producto">
-          <div class="display">
-            <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod3.jpg" alt="">
-          </div>
-          <h2>
-            Aliquam tincidunt mauris eu risus.
-          </h2>
-          <p class="precio">
-          $9.90
-          </p>
-          <p>
-            Cras ornare tristique elit.
-          </p>
-          <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="producto">
-          <div class="display">
-            <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod4.jpg" alt="">
-          </div>
-          <h2>
-            Aliquam tincidunt mauris eu risus.
-          </h2>
-          <p class="precio">
-          $9.90
-          </p>
-          <p>
-            Cras ornare tristique elit.
-          </p>
-          <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="producto">
-          <div class="display">
-            <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod5.jpg" alt="">
-          </div>
-          <h2>
-            Aliquam tincidunt mauris eu risus.
-          </h2>
-          <p class="precio">
-          $9.90
-          </p>
-          <p>
-            Cras ornare tristique elit.
-          </p>
-          <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </div>
-        </article>
-
-        <article class="producto">
-          <div class="display">
-            <img class="organic" src="img/100organic.png" alt="">
-            <img class="foto-producto"src="img/prod6.jpg" alt="">
-          </div>
-          <h2>
-            Aliquam tincidunt mauris eu risus.
-          </h2>
-          <p class="precio">
-          $9.90
-          </p>
-          <p>
-            Cras ornare tristique elit.
-          </p>
-          <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              Ver Mas
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
-          </div>
-        </article>
+        <?php endforeach; ?>
       </section>
       <?php include_once ("RB_footer.html") ?>
     </body>
   </html>
+
