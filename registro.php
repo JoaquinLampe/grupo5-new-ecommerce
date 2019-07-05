@@ -2,6 +2,13 @@
 
 require_once("funciones.php");
 
+$nombreDefault = "";
+$apellidoDefault = "";
+$emailDefault = "";
+$diaDefault = "";
+$mesDefault = "";
+$añoDefault = "";
+
 if($_POST){
    $errores = validadRegistracion($_POST);
 
@@ -18,7 +25,20 @@ if($_POST){
 
     header("location:login.php");exit; // aca se redirige a la pagina de exito//
    }
+
+   foreach ($errores as $error) {
+    echo $error . "<br>";
+  }
+ 
+
+  $nombreDefault = $_POST["nombre"];
+  $apellidoDefault = $_POST["apellido"];
+  $emailDefault = $_POST["email"];
+  $diaDefault = $_POST["dia"];
+  $mesDefault = $_POST["mes"];
+  $añoDefault = $_POST["año"];
 }
+
 
 
 
@@ -65,15 +85,18 @@ if($_POST){
                             <label for="nombre">Nombre</label>
                             <div>
                                 <input type="text" name="nombre" id="nombre" class="form-control"
-                                    placeholder="Ingresá tu nombre" required>
+                                    placeholder="Ingresá tu nombre" value="<?=$nombreDefault?>">
                             </div>
+                            <?php if ($errores) {echo $errores["nombre"];}?>
+                            
                         </div>
                         <div class="campo-registro">
                             <label for="apellido">Apellido</label>
                             <div>
                                 <input type="text" name="apellido" id="apellido" class="form-control"
-                                    placeholder="Ingresá tu apellido" required>
+                                    placeholder="Ingresá tu apellido" value="<?=$apellidoDefault?>">
                             </div>
+                            
                         </div>
                     </li>
                     <li class="genero-pais">
@@ -81,9 +104,30 @@ if($_POST){
                             <label for="genero">Género</label>
                             <div>
                                 <select name="gender" class="form-control">
-                                    <option value="" disabled selected> </option>
-                                    <option value="H">Hombre</option>
-                                    <option value="M">Mujer</option>
+                                    <?php if ($_POST && $_POST["gender"] != "") : ?>
+                                      <option disabled="disabled">Género</option>
+                                    <?php else: ?>
+                                      <option disabled="disabled" selected="selected">Género</option>
+                                    <?php endif; ?>
+
+                                    <?php if ($_POST && $_POST["gender"] == "Hombre") : ?>
+                                      <option value="H" selected>Hombre</option>
+                                    <?php else: ?>
+                                      <option value="H">Hombre</option>
+                                    <?php endif; ?>
+
+                                    <?php if ($_POST && $_POST["gender"] == "Mujer") : ?>
+                                      <option value="M" selected>Mujer</option>
+                                    <?php else: ?>
+                                      <option value="M">Mujer</option>
+                                    <?php endif; ?>
+
+                                    <?php if ($_POST && $_POST["gender"] == "Otro") : ?>
+                                      <option value="O" selected>Otro</option>
+                                    <?php else: ?>
+                                      <option value="O">Otro</option>
+                                    <?php endif; ?>
+                                    
                                 </select>
                             </div>
                         </div>
@@ -91,7 +135,7 @@ if($_POST){
                             <label for="pais">País</label>
                             <div>
                                 <input type="text" name="pais" id="pais" class="form-control"
-                                    placeholder="De donde sos?" required>
+                                    placeholder="De donde sos?">
                             </div>
                         </div>
                     </li>
@@ -100,15 +144,17 @@ if($_POST){
                             <label class="date" for="fecha-nacimiento">Fecha de nacimiento</label>
                             <div class="fecha-nac">
                                 <div class="dia">
-                                    <input type="text" id="dia" class="form-control" name="dia" value="" title="Día"
+                                    <input type="text" id="dia" class="form-control" name="dia" value="<?=$diaDefault?>" title="Día"
                                         placeholder="DD" maxlength="2" inputmode="numeric">
                                 </div>
+                                <div>            
+                                </div>
                                 <div class="mes">
-                                    <input type="text" id="mes" class="form-control" name="mes" value="" title="Mes"
+                                    <input type="text" id="mes" class="form-control" name="mes" value="<?=$mesDefault?>" title="Mes"
                                         placeholder="MM" maxlength="2" inputmode="numeric">
                                 </div>
                                 <div class="año">
-                                    <input type="text" id="año" class="form-control" name="año" value="" title="Año"
+                                    <input type="text" id="año" class="form-control" name="año" value="<?=$añoDefault?>" title="Año"
                                         placeholder="AAAA" maxlength="4" inputmode="numeric">
                                 </div>
                             </div>
@@ -119,14 +165,14 @@ if($_POST){
                             <label for="email">Email</label>
                             <div class="email">
                                 <input type="email" name="email" id="email" class="form-control"
-                                    placeholder="Escribi tu Email" required>
+                                    placeholder="Escribi tu Email" value="<?=$emailDefault?>">
                             </div>
                         </div>
                         <div class="campo-registro">
                             <label for="email-confirm">Confirmá tu email</label>
                             <div class="email-confirm">
-                                <input type="email" name="email" id="email-confirm" class="form-control"
-                                    placeholder="Confirma tu Email" required>
+                                <input type="email" name="email-confirm" id="email-confirm" class="form-control"
+                                    placeholder="Confirma tu Email">
                             </div>
                         </div>
                     </li>
@@ -135,14 +181,14 @@ if($_POST){
                             <label for="contraseña">Contraseña</label>
                             <div>
                                 <input type="password" name="password" id="password" class="form-control"
-                                    placeholder="Escribi tu Contraseña" required>
+                                    placeholder="Escribi tu Contraseña">
                             </div>
                         </div>
                         <div class="campo-registro">
                             <label for="contraseña-confirm">Confirmá tu contraseña</label>
                             <div>
                                 <input type="password" name="password-confirm" id="password-confirm"
-                                    class="form-control" placeholder="Confirma tu Contraseña" required>
+                                    class="form-control" placeholder="Confirma tu Contraseña">
                             </div>
                         </div>
                     </li>
