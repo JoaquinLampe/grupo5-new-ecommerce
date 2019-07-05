@@ -95,12 +95,12 @@
           <p class="precio">
             $<?=$envasado["precio"]?>
           </p>
-          <p>
+          <p class="descripcion">
             <?=$envasado["descripcion"]?>
           </p>
           <div class="botones-producto">
-            <a href="producto_unitario.php"><button class="btn btn-outline-primary ver-mas">
-              Ver Mas</a>
+            <button class="btn btn-outline-primary ver-mas">
+              <a href="producto_unitario.php">Ver Mas</a>
             </button>
             <button class="btn btn-outline-secondary al-carrito">
               <i class="fas fa-shopping-cart"></i>
