@@ -263,10 +263,19 @@ label {
 
 .producto h2 {
   margin-bottom: 0;
+  position: relative;
+  left: 15px;
 }
 
 .precio {
   font-size: 50px;
+  position: relative;
+  left: 15px;: 43%;
+}
+
+.descripcion {
+  position: relative;
+  left: 15px;
 }
 
 .foto-producto {
@@ -492,6 +501,21 @@ footer ul li{
       position: relative;
       top: 19px;
     }
+
+    /*productos envasados*/
+
+    .producto {
+      width: 28%;
+    }
+
+    .organic {
+      left: 146px;
+      top: 40px;
+    }
+    .fondo-organic {
+      left: 148px;
+      top: 65px;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -578,5 +602,20 @@ footer ul li{
 
     .foto-login {
       width: 400px;
+    }
+
+    /*productos envasados*/
+
+    .producto {
+      width: 25%;
+    }
+
+    .organic {
+      left: 230px;
+      top: 90px;
+    }
+    .fondo-organic {
+      left: 232px;
+      top: 115px;
     }
 }
