@@ -1,3 +1,67 @@
+<?php
+
+// Esta informacion esta duplicada de "productos_envasados"
+
+  $envasado1 = [
+		"titulo" => "Envasado 1",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod1.jpg",
+		"id" => 53,
+		"precio" => 100
+	];
+
+	$envasado2 = [
+		"titulo" => "Envasado 2",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod2.jpg",
+		"id" => 12,
+		"precio" => 200
+	];
+
+	$envasado3 = [
+		"titulo" => "Envasado 3",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod3.jpg",
+		"id" => 2,
+		"precio" => 150
+	];
+
+	$envasado4 = [
+		"titulo" => "Envasado 4",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod4.jpg",
+		"id" => 20,
+		"precio" => 100
+	];
+
+	$envasado5 = [
+		"titulo" => "Envasado 5",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod5.jpg",
+		"id" => 120,
+		"precio" => 400
+	];
+
+	$envasado6 = [
+		"titulo" => "Envasado 6",
+		"descripcion" => "Cras ornare tristique elit.",
+		"foto" => "prod6.jpg",
+		"id" => 200,
+		"precio" => 200
+	];
+
+  $envasados = [
+		$envasado1,
+		$envasado2,
+		$envasado3,
+		$envasado4,
+		$envasado5,
+		$envasado6
+    ];
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -11,30 +75,27 @@
   </head>
   <body>
 
-<?php include_once ("funciones.php")
-if ($_POST) {
-  $errores = validarLogin($_POST);
-
-  if (count($errores) == 0) {
-    loguearUsuario($_POST["email"]);
-
-    header("location:login.php");exit;
-
-    // code...
-  }}
-  // code...
-}
-
- ?>
+<?php include_once ("funciones.php") ?>
 
 
+ <div class="">
+   <div class="container text-center">
+       <h1>Informacion de la serie:</h1>
 
-<br>
+       <ul class="list-unstyled">
+           <?php foreach ($envasados as $envasadounitario) : ?>
+             <li>
+                 <?= $envasadounitario["titulo"] ?>: <?= $envasadounitario["descripcion"] ?>
+             </li>
+
+           <?php endforeach; ?>
+       </ul>
+
+   // code...
+ } ?>
+ </div>
 
 
-<br>
-<br>
-
-    <?php include_once ("footer.html") ?>
+<?php include_once ("footer.html") ?>
   </body>
 </html>

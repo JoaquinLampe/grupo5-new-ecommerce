@@ -62,10 +62,6 @@
 
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -80,6 +76,7 @@
   </head>
     <body>
       <?php include_once ("header.html") ?>
+
       <section class="productos">
        <?php foreach($envasados as $envasado) :?>
        <article class="producto">
