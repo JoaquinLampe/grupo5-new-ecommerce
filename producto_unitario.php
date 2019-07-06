@@ -1,66 +1,60 @@
 <?php
 
 // Esta informacion esta duplicada de "productos_envasados"
-
-  $envasado1 = [
+$envasados = [
+  0 => [
 		"titulo" => "Envasado 1",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod1.jpg",
 		"id" => 53,
 		"precio" => 100
-	];
+	],
 
-	$envasado2 = [
+	1 => [
 		"titulo" => "Envasado 2",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod2.jpg",
 		"id" => 12,
 		"precio" => 200
-	];
+	],
 
-	$envasado3 = [
+	2 => [
 		"titulo" => "Envasado 3",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod3.jpg",
 		"id" => 2,
 		"precio" => 150
-	];
+	],
 
-	$envasado4 = [
+	3 => [
 		"titulo" => "Envasado 4",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod4.jpg",
 		"id" => 20,
 		"precio" => 100
-	];
+	],
 
-	$envasado5 = [
+	4 => [
 		"titulo" => "Envasado 5",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod5.jpg",
 		"id" => 120,
 		"precio" => 400
-	];
+	],
 
-	$envasado6 = [
+	5 => [
 		"titulo" => "Envasado 6",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod6.jpg",
 		"id" => 200,
 		"precio" => 200
-	];
+]
 
-  $envasados = [
-		$envasado1,
-		$envasado2,
-		$envasado3,
-		$envasado4,
-		$envasado5,
-		$envasado6
-    ];
+  ];
 
 
-?>
+
+  ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -83,15 +77,21 @@
        <h1>Informacion de la serie:</h1>
 
        <ul class="list-unstyled">
-           <?php foreach ($envasados as $envasadounitario) : ?>
+
+<!-- aca el numero de $i, va a ir variando segun el producto elegido
+no supe como hacerlo sin que sea tan manual, ademas tuve que
+modificar el array de JL-->
+
+  <?php  $i = 3;?>
+
+      <?php foreach ($envasados[$i] as $key => $value) : ?>
              <li>
-                 <?= $envasadounitario["titulo"] ?>: <?= $envasadounitario["descripcion"] ?>
+                 <?= $key ?>: <?= $value ?>
              </li>
 
            <?php endforeach; ?>
-       </ul>
+               </ul>
 
- } ?>
  </div>
 
 
