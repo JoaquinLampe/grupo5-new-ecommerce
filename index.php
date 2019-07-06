@@ -11,7 +11,7 @@
   </head>
   <body>
 
-<?php include_once ("RB_header.html") ?>
+<?php include_once ("header.html") ?>
 
 <section class='banner'>
   <img src="img/photo-vegetales.jpg" alt="fotobanner">
@@ -54,7 +54,7 @@
 
 </section>
 
-<?php include_once ("RB_footer.html") ?>
+<?php include_once ("footer.html") ?>
 
 
   </body>

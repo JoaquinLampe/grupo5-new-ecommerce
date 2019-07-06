@@ -20,7 +20,7 @@ function validadRegistracion($datos){
   }
 
   // falta validar el Genero
-  
+
   if ($datos["dia"] == "") {
     $errores["dia"] = "Campo obligatorio";
   }

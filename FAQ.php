@@ -12,7 +12,7 @@
 </head>
   <body>
 
-<?php include_once ("RB_header.html") ?>
+<?php include_once ("header.html") ?>
     <div class="accordion" id="accordionExample">
       <div class="card">
         <div class="card-header" id="headingOne">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <?php include_once ("RB_footer.html") ?>
+    <?php include_once ("footer.html") ?>
 
   </body>
 </html>

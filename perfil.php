@@ -16,7 +16,7 @@
 
 <body class="cuerpo-perfil">
 
-    <?php include_once ("RB_header.html") ?>
+    <?php include_once ("header.html") ?>
 
     <main>
         <div class="profile">
@@ -49,7 +49,7 @@
 
     </main>
 
-    <?php include_once ("RB_footer.html") ?>
+    <?php include_once ("footer.html") ?>
 
 </body>
 </html>

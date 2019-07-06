@@ -1,5 +1,5 @@
 <?php
-    
+
 
   $envasado1 = [
 		"titulo" => "Envasado 1",
@@ -48,7 +48,7 @@
 		"id" => 200,
 		"precio" => 200
 	];
-    
+
   $envasados = [
 		$envasado1,
 		$envasado2,
@@ -57,7 +57,7 @@
 		$envasado5,
 		$envasado6
     ];
-    
+
 
 
 ?>
@@ -79,7 +79,7 @@
     <link rel="stylesheet" href="css/styleUnico.css">
   </head>
     <body>
-      <?php include_once ("RB_header.html") ?>
+      <?php include_once ("header.html") ?>
       <section class="productos">
        <?php foreach($envasados as $envasado) :?>
        <article class="producto">
@@ -109,7 +109,6 @@
         </article>
         <?php endforeach; ?>
       </section>
-      <?php include_once ("RB_footer.html") ?>
+      <?php include_once ("footer.html") ?>
     </body>
   </html>
-

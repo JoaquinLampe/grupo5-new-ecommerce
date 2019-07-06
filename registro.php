@@ -31,7 +31,7 @@ if($_POST){
    foreach ($errores as $error) {
     echo $error . "<br>";
   }
- 
+
 
   $nombreDefault = $_POST["nombre"];
   $apellidoDefault = $_POST["apellido"];
@@ -71,7 +71,7 @@ if($_POST){
 
 <body class="cuerpo-registro">
 
-    <?php include_once ("RB_header.html") ?>
+    <?php include_once ("header.html") ?>
 
     <main>
         <div class="registro">
@@ -90,7 +90,7 @@ if($_POST){
                                     placeholder="Ingresá tu nombre" value="<?=$nombreDefault?>">
                             </div>
                             <?php if ($errores) {echo $errores["nombre"];}?>
-                            
+
                         </div>
                         <div class="campo-registro">
                             <label for="apellido">Apellido</label>
@@ -98,7 +98,7 @@ if($_POST){
                                 <input type="text" name="apellido" id="apellido" class="form-control"
                                     placeholder="Ingresá tu apellido" value="<?=$apellidoDefault?>">
                             </div>
-                            
+
                         </div>
                     </li>
                     <li class="genero-pais">
@@ -129,7 +129,7 @@ if($_POST){
                                     <?php else: ?>
                                       <option value="O">Otro</option>
                                     <?php endif; ?>
-                                    
+
                                 </select>
                             </div>
                         </div>
@@ -149,7 +149,7 @@ if($_POST){
                                     <input type="text" id="dia" class="form-control" name="dia" value="<?=$diaDefault?>" title="Día"
                                         placeholder="DD" maxlength="2" inputmode="numeric">
                                 </div>
-                                <div>            
+                                <div>
                                 </div>
                                 <div class="mes">
                                     <input type="text" id="mes" class="form-control" name="mes" value="<?=$mesDefault?>" title="Mes"
@@ -225,7 +225,7 @@ if($_POST){
 
 
     </main>
-    <?php include_once ("RB_footer.html") ?>
+    <?php include_once ("footer.html") ?>
 
 </body>
 

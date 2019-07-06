@@ -2,7 +2,7 @@
 include_once ("funciones.php");
 
 if(estaLogueado()){
-  header("location: RB_home_v20190614.php");exit;
+  header("location: index.php");exit;
 }
 
 if ($_POST) {
@@ -11,7 +11,7 @@ if ($_POST) {
   if (count($errores) == 0) {
     loguear($_POST["email"]);
 
-    header("location:RB_home_v20190614.php");exit;
+    header("location:index.php");exit;
 
     // code...
   } else {
@@ -40,7 +40,7 @@ if ($_POST) {
 
 <body class="cuerpo-perfil">
 
-  <?php include_once ("RB_header.html") ?>
+  <?php include_once ("header.html") ?>
 
   <main>
     <div class="titulo-login">
@@ -95,7 +95,7 @@ if ($_POST) {
 
   </main>
 
-  <?php include_once ("RB_footer.html") ?>
+  <?php include_once ("footer.html") ?>
 
 </body>
 

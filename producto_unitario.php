@@ -35,6 +35,6 @@ if ($_POST) {
 <br>
 <br>
 
-    <?php include_once ("RB_footer.html") ?>
+    <?php include_once ("footer.html") ?>
   </body>
 </html>
