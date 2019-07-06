@@ -9,6 +9,8 @@ $diaDefault = "";
 $mesDefault = "";
 $añoDefault = "";
 
+$errores = "";
+
 if($_POST){
    $errores = validadRegistracion($_POST);
 
