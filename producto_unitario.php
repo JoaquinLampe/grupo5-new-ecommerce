@@ -11,7 +11,21 @@
   </head>
   <body>
 
-<?php include_once ("funciones.php") ?>
+<?php include_once ("funciones.php")
+if ($_POST) {
+  $errores = validarLogin($_POST);
+
+  if (count($errores) == 0) {
+    loguearUsuario($_POST["email"]);
+
+    header("location:login.php");exit;
+
+    // code...
+  }}
+  // code...
+}
+
+ ?>
 
 
 
