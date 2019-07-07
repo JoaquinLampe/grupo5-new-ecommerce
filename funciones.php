@@ -9,19 +9,18 @@ function validadRegistracion($datos){
     $errores["nombre"] = "El nombre debe tener 5 caracteres minimo";
   }
 
-  // no me valida el apellido
-  if ($datos["apellido"] = "") {
+  if (strlen($datos["apellido"]) == 0) {
     $errores["apellido"] = "Por favor, completa tu apellido";
   }
 
   // no me valida el pais
-  if ($datos["pais"] = "") {
+  if (strlen($datos["pais"]) == 0) {
     $errores["pais"] = "Por favor, completa tu pais";
   }
 
   // falta validar el Genero
 
-  if ($datos["dia"] == "") {
+  if (strlen($datos["dia"]) == 0) {
     $errores["dia"] = "Campo obligatorio";
   }
 
@@ -47,6 +46,13 @@ function validadRegistracion($datos){
   }
   if ($datos["email"] != "" && $datos["email-confirm"] != "" && $datos["email"] != $datos["email-confirm"]) {
     $errores["email"] = "Los emails no coinciden";
+  }
+
+  if ($datos["email-confirm"] == "") {
+    $errores["email-confirm"] = "Por favor, confirma tu email";
+  }
+  else if (filter_var($datos["email-confirm"], FILTER_VALIDATE_EMAIL) == false) {
+    $errores["email-confirm"] = "El email provisto no es correcto";
   }
 
   if ($datos["password"] == "") {
