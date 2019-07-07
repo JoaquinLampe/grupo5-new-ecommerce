@@ -28,9 +28,7 @@ if($_POST){
     header("location:login.php");exit; // aca se redirige a la pagina de exito//
    }
 
-   foreach ($errores as $error) {
-    echo $error . "<br>";
-  }
+  
 
 
   $nombreDefault = $_POST["nombre"];
@@ -98,7 +96,7 @@ if($_POST){
                                 <input type="text" name="apellido" id="apellido" class="form-control"
                                     placeholder="Ingresá tu apellido" value="<?=$apellidoDefault?>">
                             </div>
-
+                            <?php if ($errores) {echo $errores["apellido"];}?>
                         </div>
                     </li>
                     <li class="genero-pais">
@@ -139,6 +137,7 @@ if($_POST){
                                 <input type="text" name="pais" id="pais" class="form-control"
                                     placeholder="De donde sos?">
                             </div>
+                            <?php if ($errores) {echo $errores["pais"];}?>
                         </div>
                     </li>
                     <li>
@@ -148,9 +147,7 @@ if($_POST){
                                 <div class="dia">
                                     <input type="text" id="dia" class="form-control" name="dia" value="<?=$diaDefault?>" title="Día"
                                         placeholder="DD" maxlength="2" inputmode="numeric">
-                                </div>
-                                <div>
-                                </div>
+                                </div> 
                                 <div class="mes">
                                     <input type="text" id="mes" class="form-control" name="mes" value="<?=$mesDefault?>" title="Mes"
                                         placeholder="MM" maxlength="2" inputmode="numeric">
@@ -158,8 +155,13 @@ if($_POST){
                                 <div class="año">
                                     <input type="text" id="año" class="form-control" name="año" value="<?=$añoDefault?>" title="Año"
                                         placeholder="AAAA" maxlength="4" inputmode="numeric">
+                                </div>                     
                                 </div>
-                            </div>
+                                <div class="erroresNac">
+                                    <?php if ($errores) {echo $errores["dia"];}?>
+                                    <?php if ($errores) {echo $errores["mes"];}?>
+                                    <?php if ($errores) {echo $errores["año"];}?>
+                                </div>
                         </div>
                     </li>
                     <li class="email-confirmar">
@@ -169,6 +171,7 @@ if($_POST){
                                 <input type="email" name="email" id="email" class="form-control"
                                     placeholder="Escribi tu Email" value="<?=$emailDefault?>">
                             </div>
+                            <?php if ($errores) {echo $errores["email"];}?>
                         </div>
                         <div class="campo-registro">
                             <label for="email-confirm">Confirmá tu email</label>
@@ -176,6 +179,7 @@ if($_POST){
                                 <input type="email" name="email-confirm" id="email-confirm" class="form-control"
                                     placeholder="Confirma tu Email">
                             </div>
+                            <?php if ($errores) {echo $errores["email-confirm"];}?>
                         </div>
                     </li>
                     <li class="pass-confirmar">
@@ -185,6 +189,7 @@ if($_POST){
                                 <input type="password" name="password" id="password" class="form-control"
                                     placeholder="Escribi tu Contraseña">
                             </div>
+                            <?php if ($errores) {echo $errores["password"];}?>
                         </div>
                         <div class="campo-registro">
                             <label for="contraseña-confirm">Confirmá tu contraseña</label>
@@ -192,6 +197,7 @@ if($_POST){
                                 <input type="password" name="password-confirm" id="password-confirm"
                                     class="form-control" placeholder="Confirma tu Contraseña">
                             </div>
+                            <?php if ($errores) {echo $errores["password-confirm"];}?>
                         </div>
                     </li>
                     <li>
