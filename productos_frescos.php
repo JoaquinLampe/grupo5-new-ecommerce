@@ -22,7 +22,7 @@
 		"titulo" => "Fresco 3",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "fresc3.jpg",
-		"id" => 4,
+		"id" => 3,
     "precio" => 150,
     "bestseller" => true
 	];
@@ -31,7 +31,7 @@
 		"titulo" => "Fresco 4",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "fresc4.jpg",
-		"id" => 5,
+		"id" => 4,
     "precio" => 100,
     "bestseller" => false
 	];
@@ -40,7 +40,7 @@
 		"titulo" => "Fresco 5",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "fresc5.jpg",
-		"id" => 9,
+		"id" => 5,
     "precio" => 129,
     "bestseller" => false
 	];
@@ -49,7 +49,7 @@
 		"titulo" => "Fresco 6",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "fresc6.jpg",
-		"id" => 45,
+		"id" => 6,
     "precio" => 200,
     "bestseller" => true
 	];
@@ -102,15 +102,20 @@
           <p class="descripcion">
             <?=$fresco["descripcion"]?>
           </p>
+
           <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              <a href="producto_unitario.php">Ver Mas</a>
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              
-              <a href="carrito.php?idProducto=<?=$fresco["id"]?>"><i class="fas fa-shopping-cart"></i></a>
-            </button>
+            <a href="producto_unitario.php" class="boton-ver-mas">
+              <button class="btn btn-outline-primary ver-mas">
+                Ver Mas
+              </button>
+            </a>            
+            <a href="carrito.php?idProducto=<?=$fresco["id"]?>" class="boton-al-carrito">
+              <button class="btn btn-outline-secondary al-carrito">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </a>            
           </div>
+
         </article>
         <?php endforeach; ?>
       </section>

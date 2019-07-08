@@ -5,7 +5,7 @@
 		"titulo" => "Envasado 1",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod1.jpg",
-		"id" => 53,
+		"id" => 7,
 		"precio" => 100
 	];
 
@@ -13,7 +13,7 @@
 		"titulo" => "Envasado 2",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod2.jpg",
-		"id" => 12,
+		"id" => 8,
 		"precio" => 200
 	];
 
@@ -21,7 +21,7 @@
 		"titulo" => "Envasado 3",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod3.jpg",
-		"id" => 2,
+		"id" => 9,
 		"precio" => 150
 	];
 
@@ -29,7 +29,7 @@
 		"titulo" => "Envasado 4",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod4.jpg",
-		"id" => 20,
+		"id" => 10,
 		"precio" => 100
 	];
 
@@ -37,7 +37,7 @@
 		"titulo" => "Envasado 5",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod5.jpg",
-		"id" => 120,
+		"id" => 11,
 		"precio" => 400
 	];
 
@@ -45,7 +45,7 @@
 		"titulo" => "Envasado 6",
 		"descripcion" => "Cras ornare tristique elit.",
 		"foto" => "prod6.jpg",
-		"id" => 200,
+		"id" => 12,
 		"precio" => 200
 	];
 
@@ -95,14 +95,20 @@
           <p class="descripcion">
             <?=$envasado["descripcion"]?>
           </p>
+
           <div class="botones-producto">
-            <button class="btn btn-outline-primary ver-mas">
-              <a href="producto_unitario.php">Ver Mas</a>
-            </button>
-            <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
-            </button>
+            <a href="producto_unitario.php" class="boton-ver-mas">
+              <button class="btn btn-outline-primary ver-mas">
+                Ver Mas
+              </button>
+            </a>            
+            <a href="carrito.php?idProducto=<?=$envasado["id"]?>" class="boton-al-carrito">
+              <button class="btn btn-outline-secondary al-carrito">
+                <i class="fas fa-shopping-cart"></i>
+              </button>
+            </a>            
           </div>
+          
         </article>
         <?php endforeach; ?>
       </section>
