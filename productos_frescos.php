@@ -1,6 +1,5 @@
 <?php
 
-
   $fresco1 = [
 		"titulo" => "Fresco 1",
 		"descripcion" => "Cras ornare tristique elit.",
@@ -108,7 +107,8 @@
               <a href="producto_unitario.php">Ver Mas</a>
             </button>
             <button class="btn btn-outline-secondary al-carrito">
-              <i class="fas fa-shopping-cart"></i>
+              
+              <a href="carrito.php?idProducto=<?=$fresco["id"]?>"><i class="fas fa-shopping-cart"></i></a>
             </button>
           </div>
         </article>
