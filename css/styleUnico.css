@@ -205,7 +205,7 @@ label {
   display: none;
 }
 
-/*productos envasados*/
+/*listado productos*/
 
 .productos {
   display: flex;
@@ -270,7 +270,7 @@ label {
 .precio {
   font-size: 50px;
   position: relative;
-  left: 15px;: 43%;
+  left: 15px;
 }
 
 .descripcion {
@@ -293,17 +293,136 @@ label {
   justify-content: space-around;
 }
 
+.boton-ver-mas {
+  width: 40%;
+}
+
 .ver-mas {
+  width: 100%;
+}
+
+.boton-al-carrito {
   width: 40%;
 }
 
 .al-carrito {
   color: rgb(162, 186, 162);
-  width: 40%;
+  width: 100%;
 }
 
+/*carrito*/
 
+q::before { 
+  content: "X";
+}
 
+.carrito {
+  font-family: karla;
+  padding: 0px 15px 30px 15px;
+  overflow: hidden;
+}
+
+.body-shopping {
+  border-top: 1px solid rgb(162, 186, 162);  
+  border-bottom: 1px solid rgb(162, 186, 162);
+}
+
+.shop-preview {
+  overflow: hidden;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.descripcionProdPreview {
+  margin-bottom: 17px;
+}
+
+.precioProdPreview {
+  float: left;
+  width: 50px;
+}
+
+.precioProdPreview::before {
+  content: '$';
+}
+
+.cantidadPreview {
+  float: left;  
+  width: 100px;
+}
+
+.cantidadPreview input {
+  width: 40px;
+  margin-left: 20px;
+}
+
+.descartarPreview {
+  float: left;
+}
+
+.descartarPreview button{
+  border: 0;
+  padding: 4px 8px;
+  background-color: #c66;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 3px;
+}
+
+.totalPreview {
+  float: right;
+}
+
+.shop-preview img {
+  width: 50%;
+  float: right;
+}
+
+.shop-checkout {
+  float: right;
+  width: 156px;
+  margin-top: 20px;
+}
+
+.totales {
+  margin-bottom: 10px;
+}
+
+.valor-totales {
+  float: right;
+}
+
+.boton-comprar {
+  width: 100%;
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+.boton-comprar:hover {
+  box-shadow: 0px 15px 20px #007bff;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.valor-totales::before {
+  content: '$';
+}
+
+.totales label {
+  color: gray;
+}
+
+.totales-total label {
+  color: red;
+}
 
 /* footer */
 
@@ -518,6 +637,27 @@ footer ul li{
       left: 148px;
       top: 65px;
     }
+
+    /*carrito*/
+
+    .shop-preview img {
+      width: 25%;
+      float: left;
+    }
+
+    .descripcionProdPreview {
+      float: left;
+      width: 30%;
+      margin-right: 20px;
+    }
+
+    .precioProdPreview {
+      float: left;
+    }
+    
+    .shop-checkout {
+      width: 240px;
+    }
 }
 
 @media only screen and (min-width: 1024px){
@@ -620,6 +760,23 @@ footer ul li{
       left: 232px;
       top: 115px;
     }
+
+    /*carrito*/
+
+    .shop-preview img {
+      width: 15%;
+    }
+
+    .precioProdPreview {
+      width: 100px;
+      margin-left: 29px;
+    }
+
+    .descartarPreview {
+      margin-left: 60px;
+    }
+
+    
 }
 
 /* Formulario de contacto */
